@@ -1,2 +1,2 @@
 # FailOverAppender
-A Log4Net custom Appender that changes an appender when it fails
+A Log4Net custom Appender that handles Fail Overs. This appender is a container for two other appenders; a primary appender and a failover appender. By default all LoggingEvents are dispatched only to the primary appender, but if the primary appender fails at least once (throws an Exception) when handling a LoggingEvent, all that LoggingEvent and all future LoggingEvents will be dispatched only to the FailOver appender.
